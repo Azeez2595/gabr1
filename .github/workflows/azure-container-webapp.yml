@@ -24,5 +24,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: production-build       
-          path: dist/                  
+          path: ~/.npm                
           retention-days: 7            
