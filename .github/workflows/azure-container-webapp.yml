@@ -25,9 +25,11 @@ jobs:
       - name: TEST
         run: echo "code is tested !"
 
-      - name: Upload Build Artifact
-        uses: actions/upload-artifact@v4
+      - name: Artifact upload
+        uses: actions/upload-artifact@v7
         with:
-          name: production-build       
-          path: ~/.npm                
-          retention-days: 7            
+          name: artifact-1
+          path: |
+            package*
+
+
