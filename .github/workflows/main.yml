@@ -19,7 +19,7 @@ jobs:
         os: [ubuntu-latest, windows-latest] 
         node-version: [18, 20, 22] # Defines version variables
         language: ['javascript-typescript']
-    
+  
 
     permissions:
       actions: read
