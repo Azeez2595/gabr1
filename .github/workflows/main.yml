@@ -25,6 +25,7 @@ jobs:
 
   test:
     runs-on: ubuntu-slim
+    needs: build
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -40,6 +41,7 @@ jobs:
 
   deploy:
     runs-on: ubuntu-slim
+    needs: test
     steps:
 
       - name: Deploy
