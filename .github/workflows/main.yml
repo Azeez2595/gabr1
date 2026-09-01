@@ -46,3 +46,7 @@ jobs:
           name: artifact-1
           path: |
             package*
+            
+      - name: deploying the app
+        if: success() 
+        run: echo "app deployemnt is done"
