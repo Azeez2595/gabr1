@@ -48,10 +48,4 @@ jobs:
           path: |
             package*
             
-      - name: deploying the app
-        if: success() 
-        run: ech0 "app deployemnt is done"
-
-      - name: rollback
-        if: failure()
-        run: echo "rollback is successfully done" #we use rollback script
+     
