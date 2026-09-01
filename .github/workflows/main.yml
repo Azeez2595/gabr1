@@ -49,4 +49,8 @@ jobs:
             
       - name: deploying the app
         if: success() 
-        run: echo "app deployemnt is done"
+        run: ech0 "app deployemnt is done"
+
+      - name: rollback
+        if: failure()
+        run: echo "rollback is successfully done" #we use rollback script
