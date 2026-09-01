@@ -8,18 +8,18 @@ on:
 jobs:
   build_and_package:
     name: BUILD-JOB
-    runs-on: ubuntu-slim
+    runs-on: ${{ matrix.os }} # Dynamically chooses the OS
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest] 
+        node-version: [18, 20, 22] # Defines version variables
+        language: ['javascript-typescript']
 
     permissions:
       actions: read
       contents: read
       security-events: write # Required to upload findings to the Security tab
 
-    strategy:
-      fail-fast: false
-      matrix:
-        # Specify the languages you want to analyze
-        language: ['javascript-typescript']
 
     steps:
       - name: Checkout Code
