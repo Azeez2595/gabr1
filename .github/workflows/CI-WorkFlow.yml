@@ -9,7 +9,7 @@ on:
       - main
 
 permissions:
-  id-token: write # Required for OIDC authentication
+  id-token: write # Required for OIDC authenti
   contents: read  # Required to checkout the code
   pull-requests: write # Required to post plan comments on PRs
 
